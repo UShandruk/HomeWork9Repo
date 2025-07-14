@@ -17,15 +17,19 @@ public class Main {
 
         System.out.println("Задача 2");
         int[] expenses2 = {60000, 50000, 55000, 65000, 60000};
-        int expenseWeekMin = 0;
-        int expenseWeekMax = 0;
+        int expenseWeekMin = expenses2[0];
+        int expenseWeekMax = expenses2[0];
 
-        for (int element : expenses1) {
-            if (element > expenseWeekMin);
-            expenseWeekMin = element;
-            if (element > expenseWeekMax);
-                expenseWeekMax = element;
+        for (int element1 : expenses2) {
+            if (expenseWeekMin >= element1) {
+                expenseWeekMin = element1;
+            }
+
+            if (expenseWeekMax <= element1) {
+                expenseWeekMax = element1;
+            }
         }
+
         System.out.println("Минимальная сумма трат за месяц составила " + expenseWeekMin + " рублей. " +
                     "Максимальная сумма трат за неделю составила " + expenseWeekMax + " рублей.");
         System.out.println("");
